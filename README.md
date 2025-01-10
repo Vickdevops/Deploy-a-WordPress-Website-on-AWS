@@ -1,4 +1,4 @@
-![word press]()
+![word press](word press.png)
 
 ```
 # WordPress Deployment on AWS
