@@ -1,3 +1,5 @@
+![Architecture Diagram](architecture-diagram.png)
+
 
 # WordPress Deployment on AWS
 
@@ -52,37 +54,7 @@ Ensure that the AWS Command Line Interface (CLI) is installed and configured wit
 aws configure
 ```
 
-### 3. Deploy CloudFormation Templates
-
-Navigate to the `cloudformation` directory and deploy the CloudFormation templates in the following order:
-
-```bash
-cd wordpress-aws-deployment/cloudformation
-
-# Deploy the network stack
-aws cloudformation create-stack --stack-name wordpress-network --template-body file://network.yaml --parameters file://network-parameters.json
-
-# Deploy the security stack
-aws cloudformation create-stack --stack-name wordpress-security --template-body file://security.yaml --parameters file://security-parameters.json
-
-# Deploy the database stack
-aws cloudformation create-stack --stack-name wordpress-database --template-body file://database.yaml --parameters file://database-parameters.json
-
-# Deploy the application stack
-aws cloudformation create-stack --stack-name wordpress-application --template-body file://application.yaml --parameters file://application-parameters.json
-```
-
-### 4. Access the WordPress Website
-
-After the stacks are successfully deployed, obtain the DNS name of the Application Load Balancer from the AWS Management Console or by describing the stack outputs:
-
-```bash
-aws cloudformation describe-stacks --stack-name wordpress-application --query "Stacks[0].Outputs[?OutputKey=='ALBDNSName'].OutputValue" --output text
-```
-
-Navigate to the obtained DNS name in a web browser to access the WordPress website.
-
-## Scripts
+## Deployment Scripts
 
 The repository includes scripts for installing WordPress on EC2 instances and configuring the environment. Below is an example of the WordPress installation script:
 
@@ -125,11 +97,9 @@ sudo systemctl restart httpd
 
 ## Reference Diagram
 
-The architecture diagram illustrating the deployment setup is available in the repository under the `diagrams` directory.
+The architecture diagram illustrating the deployment setup is available in the repository under the `word press.png` file.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgments
 
@@ -141,6 +111,6 @@ For more detailed information and additional resources, refer to the [aws-sample
 
 By following this guide, you can deploy a scalable, secure, and highly available WordPress website on AWS, leveraging various AWS services to ensure optimal performance and reliability.
 
-For a visual demonstration of deploying WordPress using CloudFormation, you may find the following video helpful:
+
 
  
