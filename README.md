@@ -1,4 +1,4 @@
-## ![Alt text](word press.png)
+![Alt text](word press.png)
 
 
 # WordPress Deployment on AWS
