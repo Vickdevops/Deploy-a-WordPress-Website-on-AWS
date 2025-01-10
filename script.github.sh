@@ -1,4 +1,4 @@
-# create to root user
+# change to root user
 sudo su
 
 # update the software packages on the ec2 instance 
