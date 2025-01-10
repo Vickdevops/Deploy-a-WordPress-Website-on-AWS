@@ -1,4 +1,4 @@
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](wordpress.png)
 
 
 # WordPress Deployment on AWS
