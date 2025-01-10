@@ -1,4 +1,4 @@
-![word press]( word press.png)
+![word press]( [word press.png](https://github.com/Vickdevops/Deploy-a-WordPress-Website-on-AWS/blob/main/word%20press.png))
 
 
 # WordPress Deployment on AWS
