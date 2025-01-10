@@ -1,9 +1,5 @@
-![word press](word press.png)
 
-```
 # WordPress Deployment on AWS
-
-
 
 ## Project Overview
 This project demonstrates the deployment of a WordPress website on Amazon Web Services (AWS) using a robust and scalable architecture. The deployment leverages various AWS services to ensure high availability, security, and scalability.
